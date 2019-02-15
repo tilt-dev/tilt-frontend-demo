@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tilt-frontend-demo
+spec:
+  selector:
+    matchLabels:
+      app: tilt-frontend-demo
+  template:
+    metadata:
+      labels:
+        app: tilt-frontend-demo
+    spec:
+      containers:
+      - name: tilt-frontend-demo
+        image: tilt-frontend-demo
+        ports:
+        - containerPort: 3000
