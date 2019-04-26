@@ -2,8 +2,10 @@ FROM node:10
 
 WORKDIR /src
 
-ADD . /src
-
+ADD package.json package.json
+ADD package-lock.json package-lock.json
 RUN npm install
+
+ADD . /src
 
 ENTRYPOINT node scripts/start.js
