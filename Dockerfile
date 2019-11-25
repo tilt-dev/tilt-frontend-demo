@@ -1,4 +1,4 @@
-FROM node:10
+FROM docker.io/node:10
 
 WORKDIR /src
 
