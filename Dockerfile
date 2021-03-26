@@ -1,11 +1,12 @@
 FROM node:10
 
-WORKDIR /src
+WORKDIR /app
 
 ADD package.json package.json
 ADD yarn.lock yarn.lock
 RUN yarn install
 
-ADD . /src
+ADD tsconfig.json tsconfig.json
+ADD src src
 
-ENTRYPOINT npm start
+ENTRYPOINT node_modules/.bin/tsc --watch --preserveWatchOutput

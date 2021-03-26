@@ -1,0 +1,8 @@
+{
+  "files": [
+    "src/index.tsx",
+  ],
+  "compilerOptions": {
+    "skipLibCheck": true
+  },
+}
